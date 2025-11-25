@@ -2,168 +2,129 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Baár Dániel">
-    <meta name="description" content="Személyes portfólió weboldal">
-    <meta name="keywords" content="weboldal, portfólió, projektek, szolgáltatások, bemutatkozó">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" href="./IMG/icon.png">
     <title>Portfólió - Baár Dániel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Baár Dániel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Rólam</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projektek</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Készségek</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Kapcsolat</a></li>
-            </ul>
+<nav class="navbar fixed-top custom-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#fooldal">
+            <img src="./img/kep.jpg" alt="Logo" class="brand-img">
+            <span class="brand-text">Baár Dániel</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <ul class="nav-menu" id="navmenu">
+            <li><a href="#fooldal">Főoldal</a></li>
+            <li><a href="#rolam">Rólam</a></li>
+            <li><a href="#keszsegek">Készségek</a></li>
+            <li><a href="#projektek">Projektek</a></li>
+            <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+            <li><a href="#kapcsolat">Kapcsolat</a></li>
+        </ul>
     </div>
 </nav>
 
-<header class="bg-light text-dark py-5">
-    <div class="container text-center">
-        <h1 class="display-4">Üdvözöllek a portfóliómban!</h1>
-        <p class="lead">Webfejlesztő / Designer / Kreatív szakember</p>
-        <a href="#projects" class="btn btn-primary btn-lg mt-3">Projektek megtekintése</a>
+<header id="fooldal" class="hero d-flex align-items-center justify-content-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-light hero-content">
+        <h1 class="hero-title animate-fade">Üdv a portfóliómban</h1>
+        <p class="hero-subtitle animate-fade delay-1">Webfejlesztő • Designer • Kreatív megoldások</p>
+        <a href="#projektek" class="btn hero-btn animate-fade delay-2">Munkáim</a>
     </div>
 </header>
 
-<section id="about" class="py-5">
+<section id="rolam" class="py-5 text-center">
     <div class="container">
-        <h2 class="mb-4">Rólam</h2>
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="./IMG/profile.jpg" alt="Baár Dániel" class="img-fluid rounded-circle mb-3">
+        <h2 class="section-title">Rólam</h2>
+        <p class="section-desc">Szenvedélyes webfejlesztő és designer, modern, letisztult és reszponzív weboldalak készítésével.</p>
+    </div>
+</section>
+
+<section id="keszsegek" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+        <h2 class="section-title">Készségek</h2>
+        <div class="row justify-content-center mt-4 gap-3">
+            <div class="col-md-2 skill-card">HTML</div>
+            <div class="col-md-2 skill-card">CSS</div>
+            <div class="col-md-2 skill-card">JavaScript</div>
+            <div class="col-md-2 skill-card">React</div>
+            <div class="col-md-2 skill-card">Bootstrap</div>
+        </div>
+    </div>
+</section>
+
+<section id="projektek" class="py-5 text-center">
+    <div class="container">
+        <h2 class="section-title">Projektek</h2>
+        <div class="row mt-4 g-4 justify-content-center">
+            <div class="col-md-4 project-card">
+                <img src="" alt="Projekt 1" class="project-img">
+                <h3 class="project-title">Projekt 1</h3>
+                <p class="project-desc">Leírás a projektről.</p>
             </div>
-            <div class="col-md-8">
-                <p>Itt írhatod le röviden magad, a szakmai tapasztalataid, érdeklődési köröd.  
-                Célszerű kiemelni a fő kompetenciáidat, a projektjeid iránti szenvedélyt és a szakmai céljaidat.</p>
-                <a href="#contact" class="btn btn-outline-primary mt-2">Kapcsolatfelvétel</a>
+            <div class="col-md-4 project-card">
+                <img src="" alt="Projekt 2" class="project-img">
+                <h3 class="project-title">Projekt 2</h3>
+                <p class="project-desc">Leírás a projektről.</p>
+            </div>
+            <div class="col-md-4 project-card">
+                <img src="" alt="Projekt 3" class="project-img">
+                <h3 class="project-title">Projekt 3</h3>
+                <p class="project-desc">Leírás a projektről.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="mb-4 text-center">Projektek</h2>
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./IMG/project1.jpg" class="card-img-top" alt="Projekt 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Projekt neve 1</h5>
-                        <p class="card-text">Rövid leírás a projektről, milyen kihívásokat oldottál meg, milyen technológiákat használtál.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-sm btn-primary">Megtekintés</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./IMG/project2.jpg" class="card-img-top" alt="Projekt 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Projekt neve 2</h5>
-                        <p class="card-text">Rövid leírás a projektről, milyen kihívásokat oldottál meg, milyen technológiákat használtál.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-sm btn-primary">Megtekintés</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="./IMG/project3.jpg" class="card-img-top" alt="Projekt 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Projekt neve 3</h5>
-                        <p class="card-text">Rövid leírás a projektről, milyen kihívásokat oldottál meg, milyen technológiákat használtál.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-sm btn-primary">Megtekintés</a>
-                    </div>
-                </div>
-            </div>
+<section id="szolgaltatasok" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+        <h2 class="section-title">Szolgáltatások</h2>
+        <div class="row mt-4 g-4 justify-content-center">
+            <div class="col-md-3 service-card">Weboldal fejlesztés</div>
+            <div class="col-md-3 service-card">UI/UX design</div>
+            <div class="col-md-3 service-card">Responsive design</div>
         </div>
     </div>
 </section>
 
-<section id="skills" class="py-5">
+<section id="kapcsolat" class="py-5 text-center">
     <div class="container">
-        <h2 class="mb-4 text-center">Készségek</h2>
-        <div class="row g-4">
-            <div class="col-md-3 text-center">
-                <h5>HTML</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 90%;">90%</div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <h5>CSS</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <h5>JavaScript</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 80%;">80%</div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <h5>Bootstrap</h5>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-title">Kapcsolat</h2>
+        <p>Írj nekem üzenetet az alábbi elérhetőségeken.</p>
+        <a href="mailto:info@daniel.com" class="btn hero-btn mt-3">Email küldése</a>
     </div>
 </section>
 
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="mb-4 text-center">Kapcsolat</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Név</label>
-                        <input type="text" class="form-control" id="name" placeholder="Neved">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email címed">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Üzenet</label>
-                        <textarea class="form-control" id="message" rows="5" placeholder="Írd ide az üzeneted"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Küldés</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
 
-<footer class="bg-dark text-light text-center py-3">
-    <p>&copy; 2025 Baár Dániel.</p>
-</footer>
+<script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    window.addEventListener('scroll', function(){
+        document.querySelector('.custom-nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navmenu');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>
-
-
